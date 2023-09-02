@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'anime.dart';
+import 'manga.dart';
 
 class Home extends StatefulWidget {
   static const rountName = "/";
@@ -11,88 +13,51 @@ class Home extends StatefulWidget {
 class _HomeState extends State<Home> {
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        title: const Text("Home"),
-        backgroundColor: Color(0xFF2b2d42),
-      ),
-      drawer: SideMenu(),
-      body: showAll(),
-    );
-  }
-
-  Widget buildCustomCard(String imageUrl, String title, String subtitle) {
-    var screen_width = MediaQuery.of(context).size.width;
-    var screen_height = MediaQuery.of(context).size.height;
-    // คำนวณ widthCard ในฟังก์ชัน buildCustomCard
-    double margin_px = 10.0;
-    var widthCard = (screen_width - (margin_px * 6)) / 3;
-
-    return Card(
-      margin: EdgeInsets.fromLTRB(margin_px, margin_px, 3, margin_px),
-      elevation: 0.0,
-      child: Column(
-        mainAxisAlignment: MainAxisAlignment.start,
-        children: [
-          SizedBox(
-            width: widthCard,
-            child: ClipRRect(
-              borderRadius: BorderRadius.circular(5.0),
-              child: Image.network(
-                imageUrl,
-                width: 160,
-                height: 180,
-                fit: BoxFit.fitHeight,
+    return DefaultTabController(
+      length: 2, // จำนวนแท็บ
+      child: Scaffold(
+        appBar: AppBar(
+          bottom: const TabBar(
+            tabs: [
+              Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  Tab(icon: Icon(Icons.tv)),
+                  SizedBox(
+                    width: 20,
+                  ),
+                  Text(
+                    "Anime",
+                    style: TextStyle(fontWeight: FontWeight.bold),
+                  ),
+                ],
               ),
-            ),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  Tab(icon: Icon(Icons.book)),
+                  SizedBox(
+                    width: 20,
+                  ),
+                  Text(
+                    "Manga",
+                    style: TextStyle(fontWeight: FontWeight.bold),
+                  ),
+                ],
+              )
+            ],
           ),
-          SizedBox(
-            width: widthCard,
-            child: Container(
-              color: Color(0xFFfafafa),
-              child: ListTile(
-                title: Text(
-                  title,
-                  softWrap: false,
-                  maxLines: 1,
-                  overflow: TextOverflow.fade,
-                ),
-                subtitle: Text(subtitle, style: TextStyle(fontSize: 13.0)),
-              ),
-            ),
-          ),
-        ],
-      ),
-    );
-  }
-
-  Widget showAll() {
-    return ListView(
-      padding: const EdgeInsets.all(8),
-      children: [
-        Text("TRENDING NOW",
-            style: const TextStyle(fontWeight: FontWeight.bold)),
-        Row(
+          title: const Text("Home"),
+          backgroundColor: Color(0xFF2b2d42),
+        ),
+        drawer: SideMenu(),
+        body: TabBarView(
           children: [
-            buildCustomCard(
-              'https://cdn.myanimelist.net/images/anime/1582/132441l.jpg',
-              'Zom 100: Zombie ni Naru Made ni Shitai 100 no Koto',
-              'Current Ep: 9',
-            ),
-            buildCustomCard(
-              'https://cdn.myanimelist.net/images/anime/1792/138022.jpg',
-              'Jujutsu Kaisen 2nd Season',
-              'Current Ep: 7',
-            ),
-            buildCustomCard(
-              'https://cdn.myanimelist.net/images/anime/1764/126627.jpg',
-              'Bleach: Sennen Kessen-hen',
-              'Current Ep: 10',
-            ),
+            Anime(), // เนื้อหาของแท็บที่ 1
+            Manga(), // เนื้อหาของแท็บที่ 1
           ],
         ),
-        // สร้าง Rows อื่น ๆ ได้ตามต้องการ
-      ],
+      ),
     );
   }
 }
