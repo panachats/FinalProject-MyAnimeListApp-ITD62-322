@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_application/Screen/home.dart';
 
 class SideMenu extends StatelessWidget {
   const SideMenu({super.key});
@@ -33,7 +34,9 @@ class SideMenu extends StatelessWidget {
           ),
           ListTile(
             title: Text("My List"),
-            onTap: () {},
+            onTap: () {
+              Navigator.pushNamed(context, Home.rountName);
+            },
           ),
           ListTile(
             title: Text("Login"),

@@ -4,7 +4,7 @@ import 'package:flutter_application/Modules/manga.dart';
 import 'package:flutter_application/Modules/sideBar.dart';
 
 class Home extends StatefulWidget {
-  static const rountName = "/";
+  static const routeName = "/";
   const Home({super.key});
 
   @override
@@ -56,9 +56,6 @@ class _HomeState extends State<Home> {
           children: [
             Anime(), // เนื้อหาของแท็บที่ 1
             Manga(), // เนื้อหาของแท็บที่ 1
-            FloatingActionButton(onPressed: () {
-              Navigator.pushNamed(context, routeName)
-            },)
           ],
         ),
       ),

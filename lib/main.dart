@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_application/Screen/%5Banime%5Dmylist.dart';
 import 'Screen/home.dart';
 import 'Screen/login.dart';
 
@@ -14,10 +15,11 @@ class MainApp extends StatelessWidget {
     return MaterialApp(
         debugShowCheckedModeBanner: false,
         title: 'User CRUD',
-        initialRoute: '/login',
+        initialRoute: '/',
         routes: {
           '/': (context) => const Home(),
           '/login': (context) => const Login(),
+          '/mylist':(context) => const mylist()
         });
   }
 }
