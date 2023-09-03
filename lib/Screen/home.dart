@@ -56,6 +56,9 @@ class _HomeState extends State<Home> {
           children: [
             Anime(), // เนื้อหาของแท็บที่ 1
             Manga(), // เนื้อหาของแท็บที่ 1
+            FloatingActionButton(onPressed: () {
+              Navigator.pushNamed(context, routeName)
+            },)
           ],
         ),
       ),
