@@ -1,0 +1,171 @@
+{
+    "users": [
+        {
+            "u_id": "001",
+            "username": "a",
+            "password": "12345",
+            "anime": [
+                {
+                    "a_id": "a001",
+                    "title": "Gundam",
+                    "type": "anime",
+                    "ep": "50",
+                    "progress": "13"
+                }
+            ],
+            "manga": []
+        },
+        {
+            "u_id": "002",
+            "username": "b",
+            "password": "67890",
+            "anime": [],
+            "manga": []
+        },
+        {
+            "u_id": "003",
+            "username": "c",
+            "password": "12312",
+            "anime": [],
+            "manga": []
+        },
+        {
+            "u_id": "004",
+            "username": "d",
+            "password": "56236",
+            "anime": [],
+            "manga": []
+        }
+    ],
+    "anime": [
+        {
+            "a_id": "a001",
+            "img": "https://cdn.myanimelist.net/images/anime/1582/132441l.jpg",
+            "title": "Zom 100: Zombie ni Naru Made ni Shitai 100 no Koto",
+            "type": "anime",
+            "ep": "23 Episodes"
+        },
+        {
+            "a_id": "a002",
+            "img": "https://cdn.myanimelist.net/images/anime/1792/138022.jpg",
+            "title": "Jujutsu Kaisen 2nd Season",
+            "type": "anime",
+            "ep": "13 Episodes"
+        },
+        {
+            "a_id": "a003",
+            "img": "https://cdn.myanimelist.net/images/anime/1764/126627.jpg",
+            "title": "Bleach: Sennen Kessen-hen",
+            "type": "anime",
+            "ep": "13 Episodes"
+        },
+        {
+            "a_id": "a004",
+            "img": "https://cdn.myanimelist.net/images/anime/1818/126435.jpg",
+            "title": "Cyberpunk: Edgerunners",
+            "type": "anime",
+            "ep": "10 Episodes"
+        },
+        {
+            "a_id": "a005",
+            "img": "https://cdn.myanimelist.net/images/anime/1973/133295.jpg",
+            "title": "Kidou Senshi Gundam: Suisei no Majo Season 2",
+            "type": "anime",
+            "ep": "12 Episodes"
+        },
+        {
+            "a_id": "a006",
+            "img": "https://cdn.myanimelist.net/images/anime/1806/126216.jpg",
+            "title": "Chainsaw Man",
+            "type": "anime",
+            "ep": "12 Episodes"
+        },
+        {
+            "a_id": "a007",
+            "img": "https://cdn.myanimelist.net/images/anime/1028/125506l.jpg",
+            "title": "Shingeki no Kyojin: The Final Season Part 2",
+            "type": "anime",
+            "ep": "12 Episodes"
+        },
+        {
+            "a_id": "a008",
+            "img": "https://cdn.myanimelist.net/images/anime/1449/117797.jpg",
+            "title": "Takt Op. Destiny",
+            "type": "anime",
+            "ep": "12 Episodes"
+        },
+        {
+            "a_id": "a009",
+            "img": "https://cdn.myanimelist.net/images/anime/1422/113533.jpg",
+            "title": "Evangelion: 3.0+1.0 Thrice Upon a Time",
+            "type": "anime",
+            "ep": "1 Episodes"
+        }
+    ],
+    "manga": [
+        {
+            "m_id": "m001",
+            "img": "https://cdn.myanimelist.net/images/manga/2/253146.jpg",
+            "title": "One Piece",
+            "type": "manga",
+            "cpt": "1030 Chapters"
+        },
+        {
+            "m_id": "m002",
+            "img": "https://cdn.myanimelist.net/images/manga/3/179023.jpg",
+            "title": "Kimetsu no Yaiba",
+            "type": "manga",
+            "cpt": "207 Chapters"
+        },
+        {
+            "m_id": "m003",
+            "img": "https://cdn.myanimelist.net/images/manga/2/37846.jpg",
+            "title": "Shingeki no Kyojin",
+            "type": "manga",
+            "cpt": "141 Chapters"
+        },
+        {
+            "m_id": "m004",
+            "img": "https://cdn.myanimelist.net/images/manga/3/179882.jpg",
+            "title": "JoJo no Kimyou na Bouken Part 7: Steel Ball Run",
+            "type": "manga",
+            "cpt": "96 Chapters"
+        },
+        {
+            "m_id": "m005 ",
+            "img": "https://cdn.myanimelist.net/images/manga/4/280766.jpg",
+            "title": "Slam Dunk",
+            "type": "manga",
+            "cpt": "276 Chapters"
+        },
+        {
+            "m_id": "m006 ",
+            "img": "https://cdn.myanimelist.net/images/manga/2/54453l.jpg",
+            "title": "Death Note",
+            "type": "manga",
+            "cpt": "108 Chapters"
+        },
+        {
+            "m_id": "m007 ",
+            "img": "https://shop.delivered.co.kr/cdn/shop/products/loverevolutionmanhwabookvolume24koreanversiondkshop.jpg?v=1679834308",
+            "title": "Love Revolution",
+            "type": "manga",
+            "cpt": "437 Chapters"
+        },
+        {
+            "m_id": "m008 ",
+            "img": "https://cdn.myanimelist.net/images/manga/1/227594.jpg",
+            "title": "Solo Leveling",
+            "type": "manga",
+            "cpt": "201 Chapters"
+        },
+        {
+            "m_id": "m009 ",
+            "img": "https://cdn.myanimelist.net/images/manga/2/223694.jpg",
+            "title": "Tower of God",
+            "type": "manga",
+            "cpt": "563 Chapters"
+        }
+
+    ]
+}

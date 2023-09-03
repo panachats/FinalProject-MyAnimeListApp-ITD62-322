@@ -10,6 +10,7 @@ dependencies:
   flutter:
     sdk: flutter
   flutter_profile_picture: ^2.0.0
+  http: ^1.1.0
   intl: ^0.18.1
 
 dev_dependencies:
