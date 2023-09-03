@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:animated_text_kit/animated_text_kit.dart';
 
 class Login extends StatefulWidget {
   static const routeName = "/login";
@@ -13,17 +14,28 @@ class _LoginState extends State<Login> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor:
-          Colors.blueGrey[900], // สีพื้นหลังเหมือนกับ ChatGPT Mobile
+      backgroundColor: Color(0xFF2b2d42), // สีพื้นหลังเหมือนกับ ChatGPT Mobile
       body: Column(
         children: [
-          Expanded(
-            child: SizedBox(
-                width: 100.0, // กำหนดความกว้าง
-                height: 50.0, // กำหนดความสูง
-                child: Container() // วิดเจ็ตภายใน SizedBox
-                ),
+          SizedBox(
+            width: 100.0,
+            height: 200.0,
           ),
+          Expanded(
+              child: AnimatedTextKit(
+                  animatedTexts: [
+                TypewriterAnimatedText(
+                  'MyAnimeList',
+                  textStyle: const TextStyle(
+                      fontSize: 32.0,
+                      fontWeight: FontWeight.bold,
+                      color: Colors.white),
+                  speed: const Duration(milliseconds: 100),
+                ),
+              ],
+                  pause: const Duration(milliseconds: 100),
+                  displayFullTextOnTap: true,
+                  repeatForever: true)),
           Container(
             // color: Colors.white, // สีพื้นหลังส่วนล่างสุด
             height: 400,
