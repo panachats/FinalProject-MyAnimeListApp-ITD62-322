@@ -6,11 +6,11 @@
             "password": "12345",
             "anime": [
                 {
-                    "a_id": "a001",
-                    "title": "Gundam",
+                    "a_id": "a002",
+                    "img": "https://cdn.myanimelist.net/images/anime/1792/138022.jpg",
+                    "title": "Jujutsu Kaisen 2nd Season",
                     "type": "anime",
-                    "ep": "50",
-                    "progress": "13"
+                    "ep": "13 Episodes"
                 }
             ],
             "manga": []
