@@ -5,7 +5,6 @@ import 'package:flutter_application/modules/sideBar.dart';
 
 class Home extends StatefulWidget {
   static const routeName = "/";
-
   const Home({super.key});
 
   @override

@@ -2,9 +2,9 @@
 // import 'package:http/http.dart' as http;
 
 // import 'package:flutter/material.dart';
-// import 'package:mala/configure.dart';
+// import 'package:flutter_application/Modules/configure.dart';
 
-// import 'package:mala/usersAPI.dart';
+// import 'package:flutter_application/Modules/usersAPI.dart';
 
 // class mylist extends StatefulWidget {
 //   const mylist({super.key});
