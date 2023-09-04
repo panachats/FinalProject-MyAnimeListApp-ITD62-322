@@ -15,7 +15,7 @@ class MainApp extends StatelessWidget {
     return MaterialApp(
         debugShowCheckedModeBanner: false,
         title: 'User CRUD',
-        initialRoute: '/',
+        initialRoute: '/login',
         routes: {
           '/': (context) => const Home(),
           '/login': (context) => const Login(),
