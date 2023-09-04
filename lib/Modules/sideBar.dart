@@ -35,7 +35,7 @@ class SideMenu extends StatelessWidget {
           ListTile(
             title: Text("My List"),
             onTap: () {
-              Navigator.pushNamed(context, Home.rountName);
+              Navigator.pushNamed(context, Home.routeName);
             },
           ),
           ListTile(
