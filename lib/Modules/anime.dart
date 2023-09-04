@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'animeAPI.dart';
 import 'configure.dart';
 import 'package:http/http.dart' as http;
+import 'package:flutter_application/screen/animeDetail.dart';
 
 class Anime extends StatefulWidget {
   const Anime({Key? key});
@@ -37,12 +38,25 @@ class _AnimeState extends State<Anime> {
   // แก้ไข buildCustomCard ให้รับพารามิเตอร์ context
 }
 
+class AnimeD {
+  String? imageUrl;
+  String? title;
+  String? subtitle;
+
+  AnimeD({
+    this.imageUrl,
+    this.title,
+    this.subtitle,
+  });
+}
+
 Widget buildCustomCard(
   BuildContext context, // เพิ่มพารามิเตอร์ context
   String imageUrl,
   String title,
   String subtitle,
 ) {
+  // var detail = [imageUrl, title, subtitle];
   var screen_width = MediaQuery.of(context).size.width;
   double margin_px = 10.0;
   var widthCard = (screen_width - (margin_px * 6)) / 3;
@@ -50,42 +64,51 @@ Widget buildCustomCard(
   return Card(
     margin: EdgeInsets.fromLTRB(margin_px, margin_px, 3, margin_px),
     elevation: 0.0,
-    child: Column(
-      mainAxisAlignment: MainAxisAlignment.start,
-      children: [
-        SizedBox(
-          width: widthCard,
-          child: ClipRRect(
-            borderRadius: BorderRadius.circular(5.0),
-            child: Image.network(
-              imageUrl,
-              width: 160,
-              height: 180,
-              fit: BoxFit.fitHeight,
-            ),
+    child: Column(mainAxisAlignment: MainAxisAlignment.start, children: [
+      SizedBox(
+        width: widthCard,
+        child: ClipRRect(
+          borderRadius: BorderRadius.circular(5.0),
+          child: Image.network(
+            imageUrl,
+            width: 160,
+            height: 180,
+            fit: BoxFit.fitHeight,
           ),
         ),
-        SizedBox(
-          width: widthCard,
-          child: Container(
-            color: Color(0xFFfafafa),
-            child: ListTile(
-              title: Text(
-                title,
-                softWrap: false,
-                maxLines: 1,
-                overflow: TextOverflow.fade,
-                style: TextStyle(
-                  fontWeight: FontWeight.bold,
-                  color: Color(0XFF8a919c),
-                ),
+      ),
+      SizedBox(
+        width: widthCard,
+        child: Container(
+          color: Color(0xFFfafafa),
+          child: ListTile(
+            title: Text(
+              title,
+              softWrap: false,
+              maxLines: 1,
+              overflow: TextOverflow.fade,
+              style: TextStyle(
+                fontWeight: FontWeight.bold,
+                color: Color(0XFF8a919c),
               ),
-              subtitle: Text(subtitle, style: TextStyle(fontSize: 13.0)),
             ),
+            subtitle: Text(subtitle, style: TextStyle(fontSize: 13.0)),
+            onTap: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(
+                  builder: (context) => Details(
+                    imageUrl: imageUrl,
+                    title: title,
+                    subtitle: subtitle,
+                  ),
+                ),
+              );
+            },
           ),
         ),
-      ],
-    ),
+      ),
+    ]),
   );
 }
 

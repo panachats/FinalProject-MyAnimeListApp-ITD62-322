@@ -1,10 +1,11 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_application/Modules/anime.dart';
-import 'package:flutter_application/Modules/manga.dart';
-import 'package:flutter_application/Modules/sideBar.dart';
+import 'package:flutter_application/modules/anime.dart';
+import 'package:flutter_application/modules/manga.dart';
+import 'package:flutter_application/modules/sideBar.dart';
 
 class Home extends StatefulWidget {
-  static const rountName = "/";
+  static const routeName = "/";
+
   const Home({super.key});
 
   @override

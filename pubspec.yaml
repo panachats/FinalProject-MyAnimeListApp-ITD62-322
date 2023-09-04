@@ -8,6 +8,7 @@ environment:
 
 dependencies:
   animated_text_kit: ^4.2.2
+  email_validator: ^2.1.17
   flutter:
     sdk: flutter
   flutter_profile_picture: ^2.0.0
@@ -21,3 +22,4 @@ dev_dependencies:
 
 flutter:
   uses-material-design: true
+  # assets:
