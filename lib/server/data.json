@@ -11,7 +11,8 @@
                     "img": "https://cdn.myanimelist.net/images/anime/1792/138022.jpg",
                     "title": "Jujutsu Kaisen 2nd Season",
                     "type": "anime",
-                    "ep": "13 Episodes"
+                    "ep": "13 Episodes",
+                    "progress": "1"
                 }
             ],
             "manga": []
@@ -46,6 +47,7 @@
             "id": "a001",
             "img": "https://cdn.myanimelist.net/images/anime/1582/132441l.jpg",
             "title": "Zom 100: Zombie ni Naru Made ni Shitai 100 no Koto",
+            "description": "Surviving a zombie apocalypse beats being a wage slave any day! After spending years slaving away for a soul-crushing company, Akira's life has lost its luster. He lives in a trash-filled apartment, his pay is abysmal, and he can't even muster up the nerve to confess his love to his beautiful co-worker. But when a zombie apocalypse ravages his town, it gives him the push he needs to live for himself. Now Akira's on a mission to complete all 100 items on his bucket list before he...well, kicks the bucket.",
             "type": "anime",
             "ep": "23 Episodes"
         },
@@ -53,6 +55,7 @@
             "id": "a002",
             "img": "https://cdn.myanimelist.net/images/anime/1792/138022.jpg",
             "title": "Jujutsu Kaisen 2nd Season",
+            "description": "The past comes to light when second-year students Satoru Gojou and Suguru Getou are tasked with escorting young Riko Amanai to Master Tengen. But when a non-sorcerer user tries to kill them, their mission to protect the Star Plasma Vessel threatens to turn them into bitter enemies and cement their destinies—one as the world’s strongest sorcerer, and the other its most twisted curse user!",
             "type": "anime",
             "ep": "13 Episodes"
         },
@@ -60,6 +63,7 @@
             "id": "a003",
             "img": "https://cdn.myanimelist.net/images/anime/1764/126627.jpg",
             "title": "Bleach: Sennen Kessen-hen",
+            "description": "Ichigo Kurosaki gained the powers of a Soul Reaper through a chance encounter. As a Substitute Soul Reaper, Ichigo became caught in the turmoil of the Soul Society, a place where deceased souls gather. But with help from his friends, Ichigo overcame every challenge to become even stronger.",
             "type": "anime",
             "ep": "13 Episodes"
         },
@@ -67,6 +71,7 @@
             "id": "a004",
             "img": "https://cdn.myanimelist.net/images/anime/1818/126435.jpg",
             "title": "Cyberpunk: Edgerunners",
+            "description": "CYBERPUNK: EDGERUNNERS tells a standalone, 10-episode story about a street kid trying to survive in a technology and body modification-obsessed city of the future. Having everything to lose, he chooses to stay alive by becoming an edgerunner—a mercenary outlaw also known as a cyberpunk.",
             "type": "anime",
             "ep": "10 Episodes"
         },
@@ -74,6 +79,7 @@
             "id": "a005",
             "img": "https://cdn.myanimelist.net/images/anime/1973/133295.jpg",
             "title": "Kidou Senshi Gundam: Suisei no Majo Season 2",
+            "description": "An era when a multitude of corporations have entered space and built a huge economic system. After transferring to the Asticassia School of Technology from the planet Mercury, Suletta Mercury has experienced a school life filled with encounters and excitement, as both Miorine Rembran's bridegroom and a member of GUND-ARM, Inc.",
             "type": "anime",
             "ep": "12 Episodes"
         },
@@ -81,6 +87,7 @@
             "id": "a006",
             "img": "https://cdn.myanimelist.net/images/anime/1806/126216.jpg",
             "title": "Chainsaw Man",
+            "description": "Denji is a teenage boy living with a Chainsaw Devil named Pochita. Due to the debt his father left behind, he has been living a rock-bottom life while repaying his debt by harvesting devil corpses with Pochita.",
             "type": "anime",
             "ep": "12 Episodes"
         },
@@ -88,6 +95,7 @@
             "id": "a007",
             "img": "https://cdn.myanimelist.net/images/anime/1028/125506l.jpg",
             "title": "Shingeki no Kyojin: The Final Season Part 2",
+            "description": "The war for Paradis zeroes in on Shiganshina just as Jaegerists have seized control. After taking a huge blow from a surprise attack led by Eren, Marley swiftly acts to return the favor. With Zeke’s true plan revealed and a military forced under new rule, this battle might be fought on two fronts. Does Eren intend on fulfilling his half-brother’s wishes or does he have a plan of his own?",
             "type": "anime",
             "ep": "12 Episodes"
         },
@@ -95,6 +103,7 @@
             "id": "a008",
             "img": "https://cdn.myanimelist.net/images/anime/1449/117797.jpg",
             "title": "Takt Op. Destiny",
+            "description": "Music is the light that illuminates people's hearts-- and that light was suddenly taken from the world. The world changed the night the black Kuroya Meteorite fell. Grotesque monsters known as D2 emerged from the meteorite and began to overrun the land and people. As the D2 were drawn to melodies people played, eventually music itself became taboo.",
             "type": "anime",
             "ep": "12 Episodes"
         },
@@ -102,15 +111,17 @@
             "id": "a009",
             "img": "https://cdn.myanimelist.net/images/anime/1422/113533.jpg",
             "title": "Evangelion: 3.0+1.0 Thrice Upon a Time",
+            "description": "In the aftermath of the Fourth Impact, stranded without their Evangelions, Shinji, Asuka, and Rei find refuge in one of the rare pockets of humanity that still exist on the ruined planet Earth. There, each of them live a life far different from their days as an Evangelion pilot. However, the danger to the world is far from over. A new impact is looming on the horizon—one that will prove to be the true end of Evangelion. Finally, the Human Instrumentality Project is set in motion, and WILLE makes one last grueling stand to prevent the Final Impact.",
             "type": "anime",
             "ep": "1 Episodes"
         }
     ],
     "manga": [
         {
-            "รd": "m001",
+            "id": "m001",
             "img": "https://cdn.myanimelist.net/images/manga/2/253146.jpg",
             "title": "One Piece",
+            "description": "As a child, Monkey D. Luffy was inspired to become a pirate by listening to the tales of the buccaneer Red-Haired Shanks. But his life changed when Luffy accidentally ate the Gum-Gum Devil Fruit and gained the power to stretch like rubber...at the cost of never being able to swim again! Years later, still vowing to become the king of the pirates, Luffy sets out on his adventure...one guy alone in a rowboat, in search of the legendary, One Piece, said to be the greatest treasure in the world...",
             "type": "manga",
             "cpt": "1030 Chapters"
         },
@@ -118,6 +129,7 @@
             "id": "m002",
             "img": "https://cdn.myanimelist.net/images/manga/3/179023.jpg",
             "title": "Kimetsu no Yaiba",
+            "description": "The setting is Taisho era Japan. Tanjirou is a kindhearted young boy who lived peacefully with his family as a coal seller. Their normal life changes completely when his family is slaughtered by demons. The only other survivor, Tanjirou's younger sister Nezuko, has become a ferocious demon. In order to return Nezuko to normal and get revenge on the demon that killed their family, the two of them depart on a journey. From a young talent, an adventure tale of blood and swords begins!",
             "type": "manga",
             "cpt": "207 Chapters"
         },
@@ -125,6 +137,7 @@
             "id": "m003",
             "img": "https://cdn.myanimelist.net/images/manga/2/37846.jpg",
             "title": "Shingeki no Kyojin",
+            "description": "In this post-apocalyptic sci-fi story, humanity has been devastated by the bizarre, giant humanoids known as the Titans. Little is known about where they came from or why they are bent on consuming mankind. Seemingly unintelligent, they have roamed the world for years, killing everyone they see. For the past century, what's left of man has hidden in a giant, three-walled city. People believe their 50-meter-high walls will protect them from the Titans, but the sudden appearance of an immense Titan is about to change everything.",
             "type": "manga",
             "cpt": "141 Chapters"
         },
@@ -132,6 +145,7 @@
             "id": "m004",
             "img": "https://cdn.myanimelist.net/images/manga/3/179882.jpg",
             "title": "JoJo no Kimyou na Bouken Part 7: Steel Ball Run",
+            "description": "Originally presented as an unrelated story, this series was later officially declared a part of the JoJo storyline. The series stars Gyro Zeppeli, who uses a set of steel balls that spin incredibly fast, and Johnny Joestar (Jonathan Joestar), a former hot-shot jockey who was crippled by an ambusher and lost his fame and fortune. They race, along with others, in a mad-dash across America for 50 million dollars, reminiscent of The Cannonball Run.",
             "type": "manga",
             "cpt": "96 Chapters"
         },
@@ -139,6 +153,7 @@
             "id": "m005 ",
             "img": "https://cdn.myanimelist.net/images/manga/4/280766.jpg",
             "title": "Slam Dunk",
+            "description": "Hanamichi Sakuragi's got no game with girls--none at all! It doesn't help that he's known for throwing down at a moment's notice and always coming out on top. A hopeless bruiser, he's been rejected by 50 girls in a row! All that changes when he meets the girl of his dreams, Haruko, and she's actually not afraid of him! When she introduces him to the game of basketball, his life is changed forever...",
             "type": "manga",
             "cpt": "276 Chapters"
         },
@@ -146,6 +161,7 @@
             "id": "m006 ",
             "img": "https://cdn.myanimelist.net/images/manga/2/54453l.jpg",
             "title": "Death Note",
+            "description": "Light Yagami is an ace student with great prospects—and he’s bored out of his mind. But all that changes when he finds the Death Note, a notebook dropped by a rogue Shinigami death god. Any human whose name is written in the notebook dies, and Light has vowed to use the power of the Death Note to rid the world of evil. But will Light succeed in his noble goal, or will the Death Note turn him into the very thing he fights against?",
             "type": "manga",
             "cpt": "108 Chapters"
         },
@@ -153,6 +169,7 @@
             "id": "m007 ",
             "img": "https://shop.delivered.co.kr/cdn/shop/products/loverevolutionmanhwabookvolume24koreanversiondkshop.jpg?v=1679834308",
             "title": "Love Revolution",
+            "description": "Romance? That can't possibly happen to us! New comic romance concept.",
             "type": "manga",
             "cpt": "437 Chapters"
         },
@@ -160,6 +177,7 @@
             "id": "m008 ",
             "img": "https://cdn.myanimelist.net/images/manga/1/227594.jpg",
             "title": "Solo Leveling",
+            "description": "In a world where awakened beings called “Hunters” must battle deadly monsters to protect humanity, Sung Jinwoo, nicknamed “the weakest hunter of all mankind,” finds himself in a constant struggle for survival. One day, after a brutal encounter in an overpowered dungeon wipes out his party and threatens to end his life, a mysterious System chooses him as its sole player: Jinwoo has been granted the rare opportunity to level up his abilities, possibly beyond any known limits. Follow Jinwoo’s journey as he takes on ever-stronger enemies, both human and monster, to discover the secrets deep within the dungeons and the ultimate extent of his powers.",
             "type": "manga",
             "cpt": "201 Chapters"
         },
@@ -167,9 +185,9 @@
             "id": "m009 ",
             "img": "https://cdn.myanimelist.net/images/manga/2/223694.jpg",
             "title": "Tower of God",
+            "description": "Bam, who was alone all his life has entered the tower to chase after his only friend, Rachel, but how will he survive without having any special strength or power? What do you desire? Money and wealth? Honor and pride? Authority and power? Revenge? Or something that transcends them all? Whatever you desire—it's here.",
             "type": "manga",
             "cpt": "563 Chapters"
         }
-
     ]
 }

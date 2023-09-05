@@ -11,32 +11,36 @@ String mangaApiToJson(List<MangaApi> data) =>
     json.encode(List<dynamic>.from(data.map((x) => x.toJson())));
 
 class MangaApi {
-  String? mId;
+  String? id;
   String? img;
   String? title;
+  String? description;
   String? type;
   String? cpt;
 
   MangaApi({
-    this.mId,
+    this.id,
     this.img,
     this.title,
+    this.description,
     this.type,
     this.cpt,
   });
 
   factory MangaApi.fromJson(Map<String, dynamic> json) => MangaApi(
-        mId: json["m_id"],
+        id: json["id"],
         img: json["img"],
         title: json["title"],
+        description: json["description"],
         type: json["type"],
         cpt: json["cpt"],
       );
 
   Map<String, dynamic> toJson() => {
-        "m_id": mId,
+        "id": id,
         "img": img,
         "title": title,
+        "description": description,
         "type": type,
         "cpt": cpt,
       };

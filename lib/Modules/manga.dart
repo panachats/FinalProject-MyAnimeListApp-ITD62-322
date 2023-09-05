@@ -30,6 +30,7 @@ class _MangaState extends State<Manga> {
   }
 
   Widget build(BuildContext context) {
-    return Scaffold(body: showAll(context, mangasAPI));
+    return Scaffold(
+        backgroundColor: Color(0xFF0B1622), body: showAll(context, mangasAPI));
   }
 }

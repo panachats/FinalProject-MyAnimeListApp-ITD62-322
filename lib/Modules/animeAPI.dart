@@ -11,32 +11,36 @@ String animeApiToJson(List<AnimeApi> data) =>
     json.encode(List<dynamic>.from(data.map((x) => x.toJson())));
 
 class AnimeApi {
-  String? aId;
+  String? id;
   String? img;
   String? title;
+  String? description;
   String? type;
   String? ep;
 
   AnimeApi({
-    this.aId,
+    this.id,
     this.img,
     this.title,
+    this.description,
     this.type,
     this.ep,
   });
 
   factory AnimeApi.fromJson(Map<String, dynamic> json) => AnimeApi(
-        aId: json["a_id"],
+        id: json["id"],
         img: json["img"],
         title: json["title"],
+        description: json["description"],
         type: json["type"],
         ep: json["ep"],
       );
 
   Map<String, dynamic> toJson() => {
-        "a_id": aId,
+        "id": id,
         "img": img,
         "title": title,
+        "description": description,
         "type": type,
         "ep": ep,
       };

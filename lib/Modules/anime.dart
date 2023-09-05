@@ -31,6 +31,7 @@ class _AnimeState extends State<Anime> {
 
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Color(0xFF0B1622),
       body: showAll(context, animesAPI), // เรียกใช้ฟังก์ชัน showAll
     );
   }
@@ -42,21 +43,26 @@ class AnimeD {
   String? imageUrl;
   String? title;
   String? subtitle;
+  String? type;
+  String? description;
 
   AnimeD({
     this.imageUrl,
     this.title,
     this.subtitle,
+    this.type,
+    this.description,
   });
 }
 
 Widget buildCustomCard(
-  BuildContext context, // เพิ่มพารามิเตอร์ context
+  BuildContext context,
   String imageUrl,
   String title,
   String subtitle,
+  String type,
+  String description,
 ) {
-  // var detail = [imageUrl, title, subtitle];
   var screen_width = MediaQuery.of(context).size.width;
   double margin_px = 10.0;
   var widthCard = (screen_width - (margin_px * 6)) / 3;
@@ -70,46 +76,55 @@ Widget buildCustomCard(
             imageUrl: imageUrl,
             title: title,
             subtitle: subtitle,
+            type: type,
+            description: description,
           ),
         ),
       );
     },
     child: Card(
+      color: Color(0xFF0b1622),
       margin: EdgeInsets.fromLTRB(margin_px, margin_px, 3, margin_px),
       elevation: 0.0,
-      child: Column(mainAxisAlignment: MainAxisAlignment.start, children: [
-        SizedBox(
-          width: widthCard,
-          child: ClipRRect(
-            borderRadius: BorderRadius.circular(5.0),
-            child: Image.network(
-              imageUrl,
-              width: 160,
-              height: 180,
-              fit: BoxFit.fitHeight,
-            ),
-          ),
-        ),
-        SizedBox(
-          width: widthCard,
-          child: Container(
-            color: Color(0xFFfafafa),
-            child: ListTile(
-              title: Text(
-                title,
-                softWrap: false,
-                maxLines: 1,
-                overflow: TextOverflow.fade,
-                style: TextStyle(
-                  fontWeight: FontWeight.bold,
-                  color: Color(0XFF8a919c),
+      child: Column(
+        mainAxisAlignment: MainAxisAlignment.start,
+        children: [
+          SizedBox(
+            width: widthCard,
+            height: 180, // ปรับความสูงของรูป
+            child: ClipRRect(
+              borderRadius: BorderRadius.circular(5.0),
+              child: FittedBox(
+                fit: BoxFit
+                    .cover, // รูปจะแสดงพอดีกับความสูงและความกว้างของ SizedBox
+                child: Image.network(
+                  imageUrl,
                 ),
               ),
-              subtitle: Text(subtitle, style: TextStyle(fontSize: 13.0)),
             ),
           ),
-        ),
-      ]),
+          SizedBox(
+            width: widthCard,
+            child: Container(
+              color: Color(0xFF0b1622),
+              child: ListTile(
+                title: Text(
+                  title,
+                  softWrap: false,
+                  maxLines: 1,
+                  overflow: TextOverflow.fade,
+                  style: TextStyle(
+                    fontWeight: FontWeight.bold,
+                    color: Colors.white,
+                  ),
+                ),
+                subtitle: Text(subtitle,
+                    style: TextStyle(fontSize: 13.0, color: Color(0XFF8a919c))),
+              ),
+            ),
+          ),
+        ],
+      ),
     ),
   );
 }
@@ -134,13 +149,13 @@ Widget showAll(BuildContext context, animesAPI) {
             children: [
               for (int i = startIndex; i < endIndex; i++)
                 Expanded(
-                  child: buildCustomCard(
-                    context,
-                    animesAPI[i].img!,
-                    '${animesAPI[i].title}',
-                    '${animesAPI[i].type != 'manga' ? animesAPI[i].ep : animesAPI[i].cpt}',
-                  ),
-                ),
+                    child: buildCustomCard(
+                        context,
+                        animesAPI[i].img!,
+                        '${animesAPI[i].title}',
+                        '${animesAPI[i].type != 'manga' ? animesAPI[i].ep : animesAPI[i].cpt}',
+                        '${animesAPI[i].type}',
+                        '${animesAPI[i].description}')),
             ],
           ),
         ],
