@@ -61,54 +61,56 @@ Widget buildCustomCard(
   double margin_px = 10.0;
   var widthCard = (screen_width - (margin_px * 6)) / 3;
 
-  return Card(
-    margin: EdgeInsets.fromLTRB(margin_px, margin_px, 3, margin_px),
-    elevation: 0.0,
-    child: Column(mainAxisAlignment: MainAxisAlignment.start, children: [
-      SizedBox(
-        width: widthCard,
-        child: ClipRRect(
-          borderRadius: BorderRadius.circular(5.0),
-          child: Image.network(
-            imageUrl,
-            width: 160,
-            height: 180,
-            fit: BoxFit.fitHeight,
+  return InkWell(
+    onTap: () {
+      Navigator.push(
+        context,
+        MaterialPageRoute(
+          builder: (context) => Details(
+            imageUrl: imageUrl,
+            title: title,
+            subtitle: subtitle,
           ),
         ),
-      ),
-      SizedBox(
-        width: widthCard,
-        child: Container(
-          color: Color(0xFFfafafa),
-          child: ListTile(
-            title: Text(
-              title,
-              softWrap: false,
-              maxLines: 1,
-              overflow: TextOverflow.fade,
-              style: TextStyle(
-                fontWeight: FontWeight.bold,
-                color: Color(0XFF8a919c),
-              ),
+      );
+    },
+    child: Card(
+      margin: EdgeInsets.fromLTRB(margin_px, margin_px, 3, margin_px),
+      elevation: 0.0,
+      child: Column(mainAxisAlignment: MainAxisAlignment.start, children: [
+        SizedBox(
+          width: widthCard,
+          child: ClipRRect(
+            borderRadius: BorderRadius.circular(5.0),
+            child: Image.network(
+              imageUrl,
+              width: 160,
+              height: 180,
+              fit: BoxFit.fitHeight,
             ),
-            subtitle: Text(subtitle, style: TextStyle(fontSize: 13.0)),
-            onTap: () {
-              Navigator.push(
-                context,
-                MaterialPageRoute(
-                  builder: (context) => Details(
-                    imageUrl: imageUrl,
-                    title: title,
-                    subtitle: subtitle,
-                  ),
-                ),
-              );
-            },
           ),
         ),
-      ),
-    ]),
+        SizedBox(
+          width: widthCard,
+          child: Container(
+            color: Color(0xFFfafafa),
+            child: ListTile(
+              title: Text(
+                title,
+                softWrap: false,
+                maxLines: 1,
+                overflow: TextOverflow.fade,
+                style: TextStyle(
+                  fontWeight: FontWeight.bold,
+                  color: Color(0XFF8a919c),
+                ),
+              ),
+              subtitle: Text(subtitle, style: TextStyle(fontSize: 13.0)),
+            ),
+          ),
+        ),
+      ]),
+    ),
   );
 }
 
