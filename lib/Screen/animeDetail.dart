@@ -1,6 +1,9 @@
 import 'dart:ui';
 import 'package:flutter/material.dart';
 
+import 'package:http/http.dart' as http;
+import 'package:flutter_application/Modules/configure.dart';
+
 class Details extends StatelessWidget {
   final String? imageUrl;
   final String? title;
@@ -17,6 +20,14 @@ class Details extends StatelessWidget {
     this.description,
     this.ep,
   });
+
+  Future<void> getDetail() async {
+    var url = Uri.https('${Configure.server}');
+    var response =
+        await http.get(url);
+    print('Response status: ${response.statusCode}');
+    print('Response body: ${response.body}');
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -109,8 +120,28 @@ class Details extends StatelessWidget {
                                 decoration: BoxDecoration(
                                     color: Color(0xFF151f2e),
                                     borderRadius: BorderRadius.circular(5.0))),
-                            Container(
-                                margin: EdgeInsets.all(5),
+
+                            // Container(
+                            //   margin: EdgeInsets.all(5),
+                            //   child: Align(
+                            //       alignment: Alignment.center,
+                            //       child: Icon(
+                            //         Icons.star_border_sharp,
+                            //         color: Colors.white,
+                            //         size: lerpDouble(30, 30, 30),
+                            //       )),
+                            //   height: 50,
+                            //   width: 100,
+                            //   decoration: BoxDecoration(
+                            //       color: Color(0xFFec294b),
+                            //       borderRadius: BorderRadius.circular(5.0)),
+                            // ),
+
+                            SizedBox(
+                              height: 50,
+                              width: 100,
+                              child: ElevatedButton(
+                                onPressed: () {getDetail();},
                                 child: Align(
                                     alignment: Alignment.center,
                                     child: Icon(
@@ -118,11 +149,8 @@ class Details extends StatelessWidget {
                                       color: Colors.white,
                                       size: lerpDouble(30, 30, 30),
                                     )),
-                                height: 50,
-                                width: 100,
-                                decoration: BoxDecoration(
-                                    color: Color(0xFFec294b),
-                                    borderRadius: BorderRadius.circular(5.0))),
+                              ),
+                            )
                           ],
                         ),
                       ),

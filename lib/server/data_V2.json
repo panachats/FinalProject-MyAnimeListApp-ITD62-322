@@ -4,18 +4,7 @@
       "id": "001",
       "username": "a",
       "email": "a@gmail.com",
-      "password": "12345",
-      "myanime": [
-        {
-          "id": "a002",
-          "img": "https://cdn.myanimelist.net/images/anime/1792/138022.jpg",
-          "title": "Jujutsu Kaisen 2nd Season",
-          "type": "anime",
-          "ep": "13 Episodes",
-          "progress": "1"
-        }
-      ],
-      "mymanga": []
+      "password": "12345"
     },
     {
       "id": "002",
@@ -48,6 +37,21 @@
       "id": "qgemXZX"
     }
   ],
+
+  "myanime": [
+    {
+      "test":[1],
+      "id": "a002",
+      "img": "https://cdn.myanimelist.net/images/anime/1792/138022.jpg",
+      "title": "Jujutsu Kaisen 2nd Season",
+      "type": "anime",
+      "ep": "13 Episodes",
+      "progress": "1"
+      
+    }
+  ],
+  "mymanga": [],
+
   "anime": [
     {
       "id": "a001",
