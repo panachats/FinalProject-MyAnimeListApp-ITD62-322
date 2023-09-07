@@ -7,6 +7,7 @@ class Details extends StatelessWidget {
   final String? subtitle;
   final String? type;
   final String? description;
+  final String? ep;
 
   Details({
     this.imageUrl,
@@ -14,6 +15,7 @@ class Details extends StatelessWidget {
     this.subtitle,
     this.type,
     this.description,
+    this.ep,
   });
 
   @override
@@ -64,36 +66,94 @@ class Details extends StatelessWidget {
                     ),
                   ),
                 ),
-                Column(
-                  mainAxisAlignment: MainAxisAlignment.start,
-                  children: [
-                    Container(
-                      margin: EdgeInsets.fromLTRB(0, 450, 0, 0),
-                      padding: EdgeInsets.fromLTRB(0, 0, 290, 0),
-                      child: Text(
-                        "Description",
-                        style: TextStyle(color: Colors.amber),
-                      ),
-                    ),
-                    Container(
-                      margin: EdgeInsets.all(20),
-                      child: Card(
-                        color: Color(0xFF151f2e),
-                        child: Column(
+                Center(
+                  child: Column(
+                    children: [
+                      Container(
+                        margin: EdgeInsets.fromLTRB(0, 330, 0, 0),
+                        child: Row(
+                          mainAxisAlignment: MainAxisAlignment
+                              .center, // จัดตำแหน่ง Row อยู่ตรงกลาง
                           children: [
                             Container(
-                              padding: EdgeInsets.all(10),
-                              child: Text(
-                                description ?? "",
-                                style: TextStyle(color: Color(0XFF8a919c)),
+                              margin: EdgeInsets.all(5),
+                              child: Align(
+                                alignment: Alignment
+                                    .center, // จัดให้ข้อความอยู่ตรงกลาง
+                                child: Text(
+                                  "Type: ${type}",
+                                  style: TextStyle(
+                                      color: Color(0XFF8a919c),
+                                      fontWeight: FontWeight.bold),
+                                ),
                               ),
-                            )
+                              height: 50,
+                              width: 100,
+                              decoration: BoxDecoration(
+                                  color: Color(0xFF151f2e),
+                                  borderRadius: BorderRadius.circular(5.0)),
+                            ),
+                            Container(
+                                margin: EdgeInsets.all(5),
+                                child: Align(
+                                  alignment: Alignment.center,
+                                  child: Text(
+                                    ep ?? '',
+                                    style: TextStyle(
+                                        color: Color(0XFF8a919c),
+                                        fontWeight: FontWeight.bold),
+                                  ),
+                                ),
+                                height: 50,
+                                width: 100,
+                                decoration: BoxDecoration(
+                                    color: Color(0xFF151f2e),
+                                    borderRadius: BorderRadius.circular(5.0))),
+                            Container(
+                                margin: EdgeInsets.all(5),
+                                child: Align(
+                                    alignment: Alignment.center,
+                                    child: Icon(
+                                      Icons.star_border_sharp,
+                                      color: Colors.white,
+                                      size: lerpDouble(30, 30, 30),
+                                    )),
+                                height: 50,
+                                width: 100,
+                                decoration: BoxDecoration(
+                                    color: Color(0xFFec294b),
+                                    borderRadius: BorderRadius.circular(5.0))),
                           ],
                         ),
                       ),
-                    )
-                  ],
-                ),
+                      Container(
+                        margin: EdgeInsets.fromLTRB(0, 40, 0, 0),
+                        padding: EdgeInsets.fromLTRB(0, 0, 290, 0),
+                        child: Text(
+                          "Description",
+                          style: TextStyle(color: Color(0XFF8a919c)),
+                        ),
+                      ),
+                      Container(
+                        margin: EdgeInsets.all(20),
+                        child: Card(
+                          color: Color(0xFF151f2e),
+                          child: Column(
+                            children: [
+                              Container(
+                                padding: EdgeInsets.all(10),
+                                child: Text(
+                                  description ?? "",
+                                  style: TextStyle(color: Color(0XFF8a919c)),
+                                ),
+                              )
+                            ],
+                          ),
+                        ),
+                      )
+                    ],
+                  ),
+                )
               ],
             ),
           ],

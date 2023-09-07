@@ -45,6 +45,7 @@ class AnimeD {
   String? subtitle;
   String? type;
   String? description;
+  String? ep;
 
   AnimeD({
     this.imageUrl,
@@ -52,6 +53,7 @@ class AnimeD {
     this.subtitle,
     this.type,
     this.description,
+    this.ep,
   });
 }
 
@@ -62,6 +64,7 @@ Widget buildCustomCard(
   String subtitle,
   String type,
   String description,
+  String ep,
 ) {
   var screen_width = MediaQuery.of(context).size.width;
   double margin_px = 10.0;
@@ -78,6 +81,7 @@ Widget buildCustomCard(
             subtitle: subtitle,
             type: type,
             description: description,
+            ep: ep,
           ),
         ),
       );
@@ -155,7 +159,8 @@ Widget showAll(BuildContext context, animesAPI) {
                         '${animesAPI[i].title}',
                         '${animesAPI[i].type != 'manga' ? animesAPI[i].ep : animesAPI[i].cpt}',
                         '${animesAPI[i].type}',
-                        '${animesAPI[i].description}')),
+                        '${animesAPI[i].description}',
+                        '${animesAPI[i].type != 'manga' ? animesAPI[i].ep : animesAPI[i].cpt}')),
             ],
           ),
         ],
