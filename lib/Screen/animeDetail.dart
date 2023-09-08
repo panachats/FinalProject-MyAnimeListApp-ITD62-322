@@ -113,8 +113,7 @@ class Details extends StatelessWidget {
                             margin: EdgeInsets.all(5),
                             child: Align(
                               alignment: Alignment.center,
-                              child: Text(
-                                ep ?? '',
+                              child: Text('$ep ${type == 'anime' ? 'Episodes':'Chapters'}',
                                 style: TextStyle(
                                   color: Color(0XFF8a919c),
                                   fontWeight: FontWeight.bold,
