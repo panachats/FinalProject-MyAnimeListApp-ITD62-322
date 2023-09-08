@@ -54,24 +54,26 @@ List<MyListData> myListDataFromJson(String str) => List<MyListData>.from(json.de
 String myListDataToJson(List<MyListData> data) => json.encode(List<dynamic>.from(data.map((x) => x.toJson())));
 
 class MyListData {
-    String uid;     // remove '?'
-    String aid;
-    String img;
-    String title;
-    String type;
-    String ep;
-    String progress;
-    int id;
+    String? uid;     
+    String? aid;
+    String? img;
+    String? title;
+    String? description;
+    String? type;
+    String? ep;
+    String? progress;
+    int? id;
 
     MyListData({
-      required  this.uid, // ใช้ required แทนเพราะถ้าใส่ "?" ข้างบนจะทำให้แปลง String เป็น int ไม่ได้
-      required this.aid,
-      required this.img,
-      required this.title,
-      required this.type,
-      required this.ep,
-      required this.progress,
-      required this.id,
+      this.uid,
+      this.aid,
+      this.img,
+      this.title,
+      this.description,
+      this.type,
+      this.ep,
+      this.progress,
+      this.id,
     });
 
     factory MyListData.fromJson(Map<String, dynamic> json) => MyListData(
@@ -79,6 +81,7 @@ class MyListData {
         aid: json["aid"],
         img: json["img"],
         title: json["title"],
+        description: json["description"],
         type: json["type"],
         ep: json["ep"],
         progress: json["progress"],
@@ -90,6 +93,7 @@ class MyListData {
         "aid": aid,
         "img": img,
         "title": title,
+        "description": description,
         "type": type,
         "ep": ep,
         "progress": progress,

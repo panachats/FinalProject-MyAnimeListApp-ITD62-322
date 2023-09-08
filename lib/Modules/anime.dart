@@ -157,7 +157,7 @@ Widget showAll(BuildContext context, animesAPI) {
                         context,
                         animesAPI[i].img!,
                         '${animesAPI[i].title}',
-                        '${animesAPI[i].type != 'manga' ? animesAPI[i].ep : animesAPI[i].cpt}',
+                        '${animesAPI[i].type != 'manga' ? animesAPI[i].ep + ' Episodes' : animesAPI[i].cpt + ' Chapters'}',
                         '${animesAPI[i].type}',
                         '${animesAPI[i].description}',
                         '${animesAPI[i].type != 'manga' ? animesAPI[i].ep : animesAPI[i].cpt}')),

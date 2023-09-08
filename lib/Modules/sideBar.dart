@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_application/Modules/configure.dart';
+import 'package:flutter_application/Screen/login.dart';
 import 'package:flutter_application/Screen/mylist.dart';
 import 'package:flutter_application/Screen/home.dart';
 
@@ -40,8 +42,11 @@ class SideMenu extends StatelessWidget {
             },
           ),
           ListTile(
-            title: Text("Login"),
-            onTap: () {},
+            title: Text("Log out"),
+            onTap: () {
+              Configure.uid = '';
+              Navigator.pushNamed(context, Login.routeName);
+            },
           ),
         ],
       ),

@@ -36,28 +36,6 @@
       "ep": "13",
       "progress": "1",
       "id": 1
-    },
-    {
-      "uid": "001",
-      "aid": null,
-      "img": "https://cdn.myanimelist.net/images/anime/1818/126435.jpg",
-      "title": "Cyberpunk: Edgerunners",
-      "description": "CYBERPUNK: EDGERUNNERS tells a standalone, 10-episode story about a street kid trying to survive in a technology and body modification-obsessed city of the future. Having everything to lose, he chooses to stay alive by becoming an edgerunner—a mercenary outlaw also known as a cyberpunk.",
-      "type": "anime",
-      "ep": "10",
-      "progress": "1",
-      "id": 2
-    },
-    {
-      "uid": "001",
-      "mid": null,
-      "img": "https://cdn.myanimelist.net/images/manga/3/179023.jpg",
-      "title": "Kimetsu no Yaiba",
-      "description": "The setting is Taisho era Japan. Tanjirou is a kindhearted young boy who lived peacefully with his family as a coal seller. Their normal life changes completely when his family is slaughtered by demons. The only other survivor, Tanjirou's younger sister Nezuko, has become a ferocious demon. In order to return Nezuko to normal and get revenge on the demon that killed their family, the two of them depart on a journey. From a young talent, an adventure tale of blood and swords begins!",
-      "type": "manga",
-      "ep": "207",
-      "progress": "1",
-      "id": 3
     }
   ],
   "anime": [
