@@ -4,49 +4,71 @@
             "id": "001",
             "username": "a",
             "email": "a@gmail.com",
-            "password": "12345",
-            "myanime": [
-                {
-                    "id": "a002",
-                    "img": "https://cdn.myanimelist.net/images/anime/1792/138022.jpg",
-                    "title": "Jujutsu Kaisen 2nd Season",
-                    "type": "anime",
-                    "ep": "13 Episodes",
-                    "progress": "1"
-                }
-            ],
-            "mymanga": []
+            "password": "12345"
         },
         {
             "id": "002",
             "username": "b",
             "email": "b@gmail.com",
-            "password": "67890",
-            "anime": [],
-            "manga": []
+            "password": "67890"
         },
         {
             "id": "003",
             "username": "c",
             "email": "c@gmail.com",
-            "password": "12312",
-            "anime": [],
-            "manga": []
+            "password": "12312"
         },
         {
             "id": "004",
             "username": "d",
             "email": "d@gmail.com",
-            "password": "56236",
-            "anime": [],
-            "manga": []
-        },
-        {
-            "id": "RQMxIQK"
-        },
-        {
-            "id": "qgemXZX"
+            "password": "56236"
         }
+    ],
+    "myAnime": [
+        {
+            "uid": "001",
+            "aid": "a002",
+            "img": "https://cdn.myanimelist.net/images/anime/1792/138022.jpg",
+            "title": "Jujutsu Kaisen 2nd Season",
+            "type": "anime",
+            "ep": "13 Episodes",
+            "progress": "1",
+            "id": 1
+        },
+        {
+            "uid": "001",
+            "aid": "a006",
+            "img": "https://cdn.myanimelist.net/images/anime/1806/126216.jpg",
+            "title": "Chainsaw Man",
+            "description": "Denji is a teenage boy living with a Chainsaw Devil named Pochita. Due to the debt his father left behind, he has been living a rock-bottom life while repaying his debt by harvesting devil corpses with Pochita.",
+            "type": "anime",
+            "ep": "12 Episodes",
+            "id": 2
+        },
+        {
+            "uid": "001",
+            "aid": "m003",
+            "img": "https://cdn.myanimelist.net/images/manga/2/37846.jpg",
+            "title": "Shingeki no Kyojin",
+            "description": "In this post-apocalyptic sci-fi story, humanity has been devastated by the bizarre, giant humanoids known as the Titans. Little is known about where they came from or why they are bent on consuming mankind. Seemingly unintelligent, they have roamed the world for years, killing everyone they see. For the past century, what's left of man has hidden in a giant, three-walled city. People believe their 50-meter-high walls will protect them from the Titans, but the sudden appearance of an immense Titan is about to change everything.",
+            "type": "manga",
+            "ep": "141 Chapters",
+            "id": 3
+        },
+        {
+            "uid": "001",
+            "mid": "m003",
+            "img": "https://cdn.myanimelist.net/images/manga/2/37846.jpg",
+            "title": "Shingeki no Kyojin",
+            "description": "In this post-apocalyptic sci-fi story, humanity has been devastated by the bizarre, giant humanoids known as the Titans. Little is known about where they came from or why they are bent on consuming mankind. Seemingly unintelligent, they have roamed the world for years, killing everyone they see. For the past century, what's left of man has hidden in a giant, three-walled city. People believe their 50-meter-high walls will protect them from the Titans, but the sudden appearance of an immense Titan is about to change everything.",
+            "type": "manga",
+            "ep": "141 Chapters",
+            "id": 4
+        }
+    ],
+    "myManga": [
+        {}
     ],
     "anime": [
         {

@@ -32,6 +32,7 @@ class _LoginState extends State<Login> {
           .showSnackBar(SnackBar(content: Text("email or password invalid")));
     } else {
       Configure.login = login_result[0];
+      Configure.uid = login_result[0].id ?? '';
       Navigator.pushNamed(context, Home.routeName);
     }
     return;
