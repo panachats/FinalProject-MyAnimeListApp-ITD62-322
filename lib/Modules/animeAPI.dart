@@ -45,3 +45,54 @@ class AnimeApi {
         "ep": ep,
       };
 }
+
+
+
+//My List from json to class #######################################
+List<MyListData> myListDataFromJson(String str) => List<MyListData>.from(json.decode(str).map((x) => MyListData.fromJson(x)));
+
+String myListDataToJson(List<MyListData> data) => json.encode(List<dynamic>.from(data.map((x) => x.toJson())));
+
+class MyListData {
+    String? uid;
+    String? aid;
+    String? img;
+    String? title;
+    String? type;
+    String? ep;
+    String? progress;
+    int? id;
+
+    MyListData({
+        this.uid,
+        this.aid,
+        this.img,
+        this.title,
+        this.type,
+        this.ep,
+        this.progress,
+        this.id,
+    });
+
+    factory MyListData.fromJson(Map<String, dynamic> json) => MyListData(
+        uid: json["uid"],
+        aid: json["aid"],
+        img: json["img"],
+        title: json["title"],
+        type: json["type"],
+        ep: json["ep"],
+        progress: json["progress"],
+        id: json["id"],
+    );
+
+    Map<String, dynamic> toJson() => {
+        "uid": uid,
+        "aid": aid,
+        "img": img,
+        "title": title,
+        "type": type,
+        "ep": ep,
+        "progress": progress,
+        "id": id,
+    };
+}

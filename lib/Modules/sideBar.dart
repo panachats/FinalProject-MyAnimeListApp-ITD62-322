@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_application/Screen/mylist.dart';
 import 'package:flutter_application/Screen/home.dart';
 
 class SideMenu extends StatelessWidget {
@@ -35,7 +36,7 @@ class SideMenu extends StatelessWidget {
           ListTile(
             title: Text("My List"),
             onTap: () {
-              Navigator.pushNamed(context, Home.routeName);
+              Navigator.pushNamed(context, Mylist.routeName);
             },
           ),
           ListTile(

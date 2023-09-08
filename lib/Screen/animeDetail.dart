@@ -24,13 +24,13 @@ class Details extends StatelessWidget {
   });
 
   Future<void> postAnimeData(newAnimeData) async {
-    var url = Uri.http(Configure.server, 'myAnime');
+    var url = Uri.http(Configure.server, 'myList');
     var resp = await http.post(url,
         headers: <String, String>{
           'Content-Type': 'application/json; charset=UTF-8',
         },
         body: jsonEncode(newAnimeData));
-    print(resp.statusCode);
+    print(newAnimeData);
   }
 
   @override
@@ -141,6 +141,7 @@ class Details extends StatelessWidget {
                                   "description": description,
                                   "type": type,
                                   "ep": ep,
+                                  "progress": '1'
                                 });
                                 print("TEstttttttttt");
                               },
