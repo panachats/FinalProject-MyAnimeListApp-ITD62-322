@@ -45,6 +45,7 @@ class _MylistState extends State<Mylist> {
           'Content-Type': 'application/json; charset=UTF-8',
         },
         body: jsonEncode(data));
+    // print(resp);
     setState(() {
       Navigator.pop(context);
     });
@@ -76,7 +77,7 @@ class _MylistState extends State<Mylist> {
         itemCount: mylist.length,
         itemBuilder: (BuildContext context, int index) {
           // print('${Configure.uid} , ${mylist[index].uid}');
-            // print(index);
+          // print(index);
           if (Configure.uid == mylist[index].uid) {
             return SizedBox(
               height: 200,
@@ -237,7 +238,10 @@ class _MylistState extends State<Mylist> {
                                                   onPressed: () {
                                                     removeList(mylist[index]);
                                                   },
-                                                  style: ElevatedButton.styleFrom(backgroundColor: Colors.red),
+                                                  style:
+                                                      ElevatedButton.styleFrom(
+                                                          backgroundColor:
+                                                              Colors.red),
                                                   child: Text('Yes')),
                                             ],
                                           );
