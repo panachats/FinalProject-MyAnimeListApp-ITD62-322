@@ -198,7 +198,7 @@ class _MylistState extends State<Mylist> {
                                                             mylist[index]);
                                                       }
                                                     },
-                                                    child: Text('Confirm,'))
+                                                    child: Text('Confirm'))
                                               ],
                                             );
                                           },
@@ -224,7 +224,7 @@ class _MylistState extends State<Mylist> {
                                         builder: (context) {
                                           return AlertDialog(
                                             title: Text(
-                                                'Are you finished this ${mylist[0].type}?'),
+                                                'Are you finished this ${mylist[index].type}?'),
                                             content:
                                                 Text('${mylist[index].title}'),
                                             actions: [
@@ -237,6 +237,7 @@ class _MylistState extends State<Mylist> {
                                                   onPressed: () {
                                                     removeList(mylist[index]);
                                                   },
+                                                  style: ElevatedButton.styleFrom(backgroundColor: Colors.red),
                                                   child: Text('Yes')),
                                             ],
                                           );

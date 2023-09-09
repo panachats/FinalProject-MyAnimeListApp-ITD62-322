@@ -38,8 +38,7 @@ class Details extends StatelessWidget {
     return Scaffold(
       backgroundColor: Color(0xFF0B1622),
       appBar: AppBar(
-        // title: Text(title ?? ''),
-        title: Text(Configure.uid),
+        title: Text(title ?? ''),
         backgroundColor: Color(0xFF2b2d42),
       ),
       body: ListView(
@@ -144,7 +143,6 @@ class Details extends StatelessWidget {
                                   "ep": ep,
                                   "progress": '1'
                                 });
-                                print("TEstttttttttt");
                               },
                               child: Align(
                                 alignment: Alignment.center,

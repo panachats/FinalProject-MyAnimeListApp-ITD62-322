@@ -31,10 +31,7 @@ class SideMenu extends StatelessWidget {
                         ""),
                     fit: BoxFit.fill)),
           ),
-          ListTile(
-            title: Text("Home"),
-            onTap: () {},
-          ),
+         
           ListTile(
             title: Text("My List"),
             onTap: () {
