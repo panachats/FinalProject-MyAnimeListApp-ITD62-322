@@ -46,37 +46,37 @@ class AnimeApi {
       };
 }
 
-
-
 //My List from json to class #######################################
-List<MyListData> myListDataFromJson(String str) => List<MyListData>.from(json.decode(str).map((x) => MyListData.fromJson(x)));
+List<MyListData> myListDataFromJson(String str) =>
+    List<MyListData>.from(json.decode(str).map((x) => MyListData.fromJson(x)));
 
-String myListDataToJson(List<MyListData> data) => json.encode(List<dynamic>.from(data.map((x) => x.toJson())));
+String myListDataToJson(List<MyListData> data) =>
+    json.encode(List<dynamic>.from(data.map((x) => x.toJson())));
 
 class MyListData {
-    String? uid;     
-    String? aid;
-    String? img;
-    String? title;
-    String? description;
-    String? type;
-    String? ep;
-    String? progress;
-    int? id;
+  String? uid;
+  String? aid;
+  String? img;
+  String? title;
+  String? description;
+  String? type;
+  String? ep;
+  String? progress;
+  int? id;
 
-    MyListData({
-      this.uid,
-      this.aid,
-      this.img,
-      this.title,
-      this.description,
-      this.type,
-      this.ep,
-      this.progress,
-      this.id,
-    });
+  MyListData({
+    this.uid,
+    this.aid,
+    this.img,
+    this.title,
+    this.description,
+    this.type,
+    this.ep,
+    this.progress,
+    this.id,
+  });
 
-    factory MyListData.fromJson(Map<String, dynamic> json) => MyListData(
+  factory MyListData.fromJson(Map<String, dynamic> json) => MyListData(
         uid: json["uid"],
         aid: json["aid"],
         img: json["img"],
@@ -86,9 +86,9 @@ class MyListData {
         ep: json["ep"],
         progress: json["progress"],
         id: json["id"],
-    );
+      );
 
-    Map<String, dynamic> toJson() => {
+  Map<String, dynamic> toJson() => {
         "uid": uid,
         "aid": aid,
         "img": img,
@@ -98,5 +98,5 @@ class MyListData {
         "ep": ep,
         "progress": progress,
         "id": id,
-    };
+      };
 }

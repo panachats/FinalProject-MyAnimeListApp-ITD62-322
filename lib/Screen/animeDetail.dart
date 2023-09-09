@@ -30,7 +30,6 @@ class Details extends StatelessWidget {
           'Content-Type': 'application/json; charset=UTF-8',
         },
         body: jsonEncode(newAnimeData));
-    print(resp);
     print(newAnimeData);
   }
 

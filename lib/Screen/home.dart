@@ -5,7 +5,7 @@ import 'package:flutter_application/modules/sideBar.dart';
 
 class Home extends StatefulWidget {
   static const routeName = "/";
-  
+
   const Home({super.key});
 
   @override
@@ -15,7 +15,6 @@ class Home extends StatefulWidget {
 class _HomeState extends State<Home> {
   @override
   Widget build(BuildContext context) {
-
     return DefaultTabController(
       length: 2, // จำนวนแท็บ
       child: Scaffold(

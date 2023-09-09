@@ -8,24 +8,22 @@ class test extends StatefulWidget {
 }
 
 class _testState extends State<test> {
-
-  var test = [1,2,3,4,5,6,7];
+  var test = [1, 2, 3, 4, 5, 6, 7];
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        appBar: AppBar(
-          title: const Text("Home"),
-          backgroundColor: Color(0xFF2b2d42),
-        ),
-        // drawer: SideMenu(),
-        // body: showAll(),
-        body: 
-          ListView.builder(
-            itemCount: test.length,
-            itemBuilder: (BuildContext context, int index) {
-              return Card(
-                elevation: 5,
+      appBar: AppBar(
+        title: const Text("Home"),
+        backgroundColor: Color(0xFF2b2d42),
+      ),
+      // drawer: SideMenu(),
+      // body: showAll(),
+      body: ListView.builder(
+        itemCount: test.length,
+        itemBuilder: (BuildContext context, int index) {
+          return Card(
+            elevation: 5,
             margin: EdgeInsets.all(10),
             child: Row(children: [
               Container(
@@ -55,9 +53,8 @@ class _testState extends State<test> {
               ),
             ]),
           );
-            },
-          ),
-          
-        );
+        },
+      ),
+    );
   }
 }

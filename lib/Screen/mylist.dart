@@ -45,7 +45,6 @@ class _MylistState extends State<Mylist> {
           'Content-Type': 'application/json; charset=UTF-8',
         },
         body: jsonEncode(data));
-    // print(resp);
     setState(() {
       Navigator.pop(context);
     });
@@ -171,6 +170,9 @@ class _MylistState extends State<Mylist> {
                                                       if (intValue >
                                                           intProgress) {
                                                         return "Your input is exceed total ${mylist[index].type == 'anime' ? 'Episodes' : 'Chapters'}";
+                                                      } else if (intValue ==
+                                                          0) {
+                                                        return "The input can't be 0";
                                                       }
 
                                                       return null;

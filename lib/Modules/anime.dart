@@ -57,16 +57,8 @@ class AnimeD {
   });
 }
 
-Widget buildCustomCard(
-  BuildContext context,
-  String imageUrl,
-  String title,
-  String subtitle,
-  String type,
-  String description,
-  String ep,
-  String id
-) {
+Widget buildCustomCard(BuildContext context, String imageUrl, String title,
+    String subtitle, String type, String description, String ep, String id) {
   var screen_width = MediaQuery.of(context).size.width;
   double margin_px = 10.0;
   var widthCard = (screen_width - (margin_px * 6)) / 3;
@@ -77,14 +69,13 @@ Widget buildCustomCard(
         context,
         MaterialPageRoute(
           builder: (context) => Details(
-            imageUrl: imageUrl,
-            title: title,
-            subtitle: subtitle,
-            type: type,
-            description: description,
-            ep: ep,
-            id: id
-          ),
+              imageUrl: imageUrl,
+              title: title,
+              subtitle: subtitle,
+              type: type,
+              description: description,
+              ep: ep,
+              id: id),
         ),
       );
     },
