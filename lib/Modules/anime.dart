@@ -65,6 +65,7 @@ Widget buildCustomCard(
   String type,
   String description,
   String ep,
+  String id
 ) {
   var screen_width = MediaQuery.of(context).size.width;
   double margin_px = 10.0;
@@ -82,6 +83,7 @@ Widget buildCustomCard(
             type: type,
             description: description,
             ep: ep,
+            id: id
           ),
         ),
       );
@@ -160,7 +162,8 @@ Widget showAll(BuildContext context, animesAPI) {
                         '${animesAPI[i].type != 'manga' ? animesAPI[i].ep + ' Episodes' : animesAPI[i].cpt + ' Chapters'}',
                         '${animesAPI[i].type}',
                         '${animesAPI[i].description}',
-                        '${animesAPI[i].type != 'manga' ? animesAPI[i].ep : animesAPI[i].cpt}')),
+                        '${animesAPI[i].type != 'manga' ? animesAPI[i].ep : animesAPI[i].cpt}',
+                        animesAPI[i].id)),
             ],
           ),
         ],

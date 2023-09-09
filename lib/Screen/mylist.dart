@@ -1,15 +1,15 @@
 import 'dart:convert';
 
-
 import 'package:http/http.dart' as http;
 import 'package:flutter/material.dart';
-import 'package:validation_pro/validation_pro.dart';
+// import 'package:validation_pro/validation_pro.dart';
 
-import 'package:flutter_application/Modules/configure.dart';
-import 'package:flutter_application/Modules/animeAPI.dart';
+import 'package:flutter_application/modules/configure.dart';
+import 'package:flutter_application/modules/animeAPI.dart';
 
 class Mylist extends StatefulWidget {
   static const routeName = "/mylist";
+
   const Mylist({super.key});
 
   @override
@@ -18,7 +18,7 @@ class Mylist extends StatefulWidget {
 
 class _MylistState extends State<Mylist> {
   List<MyListData> mylist = [];
-  String uid = Configure.uid;
+
   final _editformkey = GlobalKey<FormState>();
 
   @override
@@ -54,7 +54,7 @@ class _MylistState extends State<Mylist> {
   Future<void> removeList(data) async {
     var url = Uri.http(Configure.server, 'myList/${data.id}');
     var resp = await http.delete(url);
-    print(resp.statusCode);
+    // print(resp.statusCode);
     setState(() {
       getMyList();
       Navigator.pop(context);
@@ -67,7 +67,7 @@ class _MylistState extends State<Mylist> {
     return Scaffold(
       backgroundColor: Color(0xFF0B1622),
       appBar: AppBar(
-        title:  Text("My Anime/Manga List ${uid}"),
+        title: Text("My Anime/Manga List"),
         backgroundColor: Color(0xFF2b2d42),
       ),
       // drawer: SideMenu(),
@@ -75,182 +75,191 @@ class _MylistState extends State<Mylist> {
       body: ListView.builder(
         itemCount: mylist.length,
         itemBuilder: (BuildContext context, int index) {
-          print('${Configure.uid} , ${mylist[index].uid}');
-          if(Configure.uid == mylist[index].uid){
-            print(index);
-             return SizedBox(
-            height: 200,
-            child: ClipRRect(
-              borderRadius: BorderRadius.circular(10.0),
-              child: Card(
-                color: Color(0xFF151f2e),
-                elevation: 5,
-                margin: EdgeInsets.all(10),
-                child: Row(children: [
-                  Container(
-                    child: SizedBox(
-                        width: 148.4,
-                        // child: Image.network(img[index],scale: 2,),
-                        child: Image.network(
-                          mylist[index].img ?? '',
-                          scale: 2,
-                        )),
-                  ),
-                  Container(
-                    child: Padding(
-                      padding: const EdgeInsets.fromLTRB(0, 0, 10, 0),
-                      child: Column(
-                        mainAxisAlignment: MainAxisAlignment.start,
-                        children: [
-                          SizedBox(
-                            width: 212.6,
-                            // height: 212.6,
-                            child: ListTile(
-                              // shape: RoundedRectangleBorder(side: BorderSide(width: 2)),
-                              title: Padding(
-                                padding: const EdgeInsets.fromLTRB(0, 10, 0, 5),
-                                child: Text(
-                                  '${mylist[index].title}',
-                                  style: TextStyle(color: Colors.white),
-                                ),
-                              ),
-                              // subtitle: Text('${MediaQuery.of(context).size.height}'),
-                              subtitle: Padding(
-                                padding: const EdgeInsets.fromLTRB(0, 5, 0, 5),
-                                child: Text(
-                                  '${mylist[index].type == 'anime' ? 'Type: ${mylist[index].type}\nWatching' : 'Type: ${mylist[index].type}\nReading'}: ${mylist[index].progress} of ${mylist[index].ep}',
-                                  style: TextStyle(
-                                    color: Color(0XFF8a919c),
+          // print('${Configure.uid} , ${mylist[index].uid}');
+            // print(index);
+          if (Configure.uid == mylist[index].uid) {
+            return SizedBox(
+              height: 200,
+              child: ClipRRect(
+                borderRadius: BorderRadius.circular(10.0),
+                child: Card(
+                  color: Color(0xFF151f2e),
+                  elevation: 5,
+                  margin: EdgeInsets.all(10),
+                  child: Row(children: [
+                    Container(
+                      child: SizedBox(
+                          width: 148.4,
+                          // child: Image.network(img[index],scale: 2,),
+                          child: Image.network(
+                            mylist[index].img ?? '',
+                            scale: 2,
+                          )),
+                    ),
+                    Container(
+                      child: Padding(
+                        padding: const EdgeInsets.fromLTRB(0, 0, 10, 0),
+                        child: Column(
+                          mainAxisAlignment: MainAxisAlignment.start,
+                          children: [
+                            SizedBox(
+                              width: 212.6,
+                              // height: 212.6,
+                              child: ListTile(
+                                // shape: RoundedRectangleBorder(side: BorderSide(width: 2)),
+                                title: Padding(
+                                  padding:
+                                      const EdgeInsets.fromLTRB(0, 10, 0, 5),
+                                  child: Text(
+                                    '${mylist[index].title}',
+                                    style: TextStyle(color: Colors.white),
                                   ),
-                                ), //Check type for anime and manga
+                                ),
+                                // subtitle: Text('${MediaQuery.of(context).size.height}'),
+                                subtitle: Padding(
+                                  padding:
+                                      const EdgeInsets.fromLTRB(0, 5, 0, 5),
+                                  child: Text(
+                                    '${mylist[index].type == 'anime' ? 'Type: ${mylist[index].type}\nWatching' : 'Type: ${mylist[index].type}\nReading'}: ${mylist[index].progress} of ${mylist[index].ep}',
+                                    style: TextStyle(
+                                      color: Color(0XFF8a919c),
+                                    ),
+                                  ), //Check type for anime and manga
+                                ),
+                                // trailing: Text('${test[index]}'),
                               ),
-                              // trailing: Text('${test[index]}'),
                             ),
-                          ),
-                          Row(
-                            children: [
-                              Container(
-                                margin: EdgeInsets.fromLTRB(0, 0, 3, 0),
-                                child: ElevatedButton(
+                            Row(
+                              children: [
+                                Container(
+                                  margin: EdgeInsets.fromLTRB(0, 0, 3, 0),
+                                  child: ElevatedButton(
+                                      onPressed: () {
+                                        final editList = TextEditingController(
+                                            text: "${mylist[index].progress}");
+
+                                        int intProgress =
+                                            int.parse(mylist[index].ep ?? '0');
+
+                                        showDialog(
+                                          context: context,
+                                          builder: (context) {
+                                            return AlertDialog(
+                                              title: Text('Edit Progress'),
+                                              content: SizedBox(
+                                                width: 100,
+                                                child: Form(
+                                                  key: _editformkey,
+                                                  child: TextFormField(
+                                                    controller: editList,
+                                                    validator: (value) {
+                                                      if (value == '') {
+                                                        return "This field is required";
+                                                      } else if (value!
+                                                              .contains('.') ||
+                                                          value!
+                                                              .contains(',')) {
+                                                        return "Input decimal number only";
+                                                      }
+
+                                                      // Transform value into int
+
+                                                      int intValue =
+                                                          int.parse(value);
+
+                                                      if (intValue >
+                                                          intProgress) {
+                                                        return "Your input is exceed total ${mylist[index].type == 'anime' ? 'Episodes' : 'Chapters'}";
+                                                      }
+
+                                                      return null;
+                                                    },
+                                                    autofocus: true,
+                                                    keyboardType:
+                                                        TextInputType.number,
+                                                    decoration: InputDecoration(
+                                                        hintText:
+                                                            "Input number of ${mylist[index].type == 'anime' ? 'episodes' : 'chapters'}"),
+                                                  ),
+                                                ),
+                                              ),
+                                              actions: [
+                                                ElevatedButton(
+                                                    onPressed: () {
+                                                      if (_editformkey
+                                                          .currentState!
+                                                          .validate()) {
+                                                        _editformkey
+                                                            .currentState!
+                                                            .save();
+                                                        mylist[index].progress =
+                                                            editList.text;
+                                                        editMyList(
+                                                            mylist[index]);
+                                                      }
+                                                    },
+                                                    child: Text('Confirm,'))
+                                              ],
+                                            );
+                                          },
+                                        );
+                                      },
+                                      child: Row(
+                                        children: [
+                                          Container(
+                                              margin: EdgeInsets.all(3),
+                                              child: Icon(Icons.edit)),
+                                          Container(
+                                              margin: EdgeInsets.all(3),
+                                              child: Text('Edit Progress')),
+                                        ],
+                                      )),
+                                ),
+                                Container(
+                                  margin: EdgeInsets.fromLTRB(3, 0, 0, 0),
+                                  child: ElevatedButton(
                                     onPressed: () {
-                                      final editList = TextEditingController(
-                                          text: "${mylist[index].progress}");
-
-                                      int intProgress =
-                                          int.parse(mylist[index].ep ?? '0');
-
                                       showDialog(
                                         context: context,
                                         builder: (context) {
                                           return AlertDialog(
-                                            title: Text('Edit Progress'),
-                                            content: SizedBox(
-                                              width: 100,
-                                              child: Form(
-                                                key: _editformkey,
-                                                child: TextFormField(
-                                                  controller: editList,
-                                                  validator: (value) {
-                                                    if (value == '') {
-                                                      return "This field is required";
-                                                    } else if (value!
-                                                            .contains('.') ||
-                                                        value!.contains(',')) {
-                                                      return "Input decimal number only";
-                                                    }
-
-                                                    // Transform value into int
-
-                                                    int intValue =
-                                                        int.parse(value);
-
-                                                    if (intValue >
-                                                        intProgress) {
-                                                      return "Your input is exceed total ${mylist[index].type == 'anime' ? 'Episodes' : 'Chapters'}";
-                                                    }
-
-                                                    return null;
-                                                  },
-                                                  autofocus: true,
-                                                  keyboardType:
-                                                      TextInputType.number,
-                                                  decoration: InputDecoration(
-                                                      hintText:
-                                                          "Input number of ${mylist[index].type == 'anime' ? 'episodes' : 'chapters'}"),
-                                                ),
-                                              ),
-                                            ),
+                                            title: Text(
+                                                'Are you finished this ${mylist[0].type}?'),
+                                            content:
+                                                Text('${mylist[index].title}'),
                                             actions: [
                                               ElevatedButton(
                                                   onPressed: () {
-                                                    if (_editformkey
-                                                        .currentState!
-                                                        .validate()) {
-                                                      _editformkey.currentState!
-                                                          .save();
-                                                      mylist[index].progress =
-                                                          editList.text;
-                                                      editMyList(mylist[index]);
-                                                    }
+                                                    Navigator.pop(context);
                                                   },
-                                                  child: Text('Confirm,'))
+                                                  child: Text('No')),
+                                              ElevatedButton(
+                                                  onPressed: () {
+                                                    removeList(mylist[index]);
+                                                  },
+                                                  child: Text('Yes')),
                                             ],
                                           );
                                         },
                                       );
                                     },
-                                    child: Row(
-                                      children: [
-                                        Container(
-                                            margin: EdgeInsets.all(3),
-                                            child: Icon(Icons.edit)),
-                                        Container(
-                                            margin: EdgeInsets.all(3),
-                                            child: Text('Edit Progress')),
-                                      ],
-                                    )),
-                              ),
-                              Container(
-                                margin: EdgeInsets.fromLTRB(3, 0, 0, 0),
-                                child: ElevatedButton(
-                                    onPressed: () {
-                                      showDialog(context: context,
-                                      builder: (context) {
-                                        return AlertDialog(
-                                          title: Text('Are you finished this ${mylist[0].type}?'),
-                                          content: Text('${mylist[index].title}'),
-                                          actions: [
-                                            ElevatedButton(
-                                              onPressed: () {
-                                              Navigator.pop(context);
-                                            }, child: Text('No')),
-                                            ElevatedButton(
-                                              onPressed: () {
-                                                removeList(mylist[index]);
-                                            }, child: Text('Yes')),
-                                          ],
-                                        );
-                                      },);
-                                      
-                                    },
                                     child: Icon(Icons.delete),
                                     style: ElevatedButton.styleFrom(
-                                      backgroundColor: Colors.red
-                                    ),
-                                    ),
-                              )
-                            ],
-                          ),
-                        ],
+                                        backgroundColor: Colors.red),
+                                  ),
+                                )
+                              ],
+                            ),
+                          ],
+                        ),
                       ),
                     ),
-                  ),
-                ]),
+                  ]),
+                ),
               ),
-            ),
-          );
-          }         //if
-         
+            );
+          } //if
+          return SizedBox.shrink();
         },
       ),
     );

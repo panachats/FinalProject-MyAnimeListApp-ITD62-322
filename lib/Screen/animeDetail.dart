@@ -38,7 +38,8 @@ class Details extends StatelessWidget {
     return Scaffold(
       backgroundColor: Color(0xFF0B1622),
       appBar: AppBar(
-        title: Text(title ?? ''),
+        // title: Text(title ?? ''),
+        title: Text(Configure.uid),
         backgroundColor: Color(0xFF2b2d42),
       ),
       body: ListView(
@@ -132,6 +133,7 @@ class Details extends StatelessWidget {
                             width: 100,
                             child: ElevatedButton(
                               onPressed: () {
+                                print(id);
                                 postAnimeData({
                                   "uid": Configure.uid,
                                   "${type != 'manga' ? 'aid' : 'mid'}": id,

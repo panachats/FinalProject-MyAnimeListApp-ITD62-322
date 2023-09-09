@@ -83,11 +83,6 @@ packages:
     description: flutter
     source: sdk
     version: "0.0.0"
-  flutter_web_plugins:
-    dependency: transitive
-    description: flutter
-    source: sdk
-    version: "0.0.0"
   http:
     dependency: "direct main"
     description:
@@ -152,14 +147,6 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "1.8.3"
-  plugin_platform_interface:
-    dependency: transitive
-    description:
-      name: plugin_platform_interface
-      sha256: da3fdfeccc4d4ff2da8f8c556704c08f912542c5fb3cf2233ed75372384a034d
-      url: "https://pub.dev"
-    source: hosted
-    version: "2.1.6"
   sky_engine:
     dependency: transitive
     description: flutter
@@ -221,14 +208,6 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "1.3.2"
-  validation_pro:
-    dependency: "direct main"
-    description:
-      name: validation_pro
-      sha256: efb921bb7a7a75a11d307225b4f267c23bcdf1e05dabf4dfd56d490aa2468302
-      url: "https://pub.dev"
-    source: hosted
-    version: "1.1.0"
   vector_math:
     dependency: transitive
     description:
@@ -247,4 +226,4 @@ packages:
     version: "0.1.4-beta"
 sdks:
   dart: ">=3.1.0-185.0.dev <4.0.0"
-  flutter: ">=2.5.0"
+  flutter: ">=1.22.0"

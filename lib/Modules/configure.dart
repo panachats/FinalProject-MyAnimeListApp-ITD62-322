@@ -9,4 +9,5 @@ class Configure {
   static Users login = Users();
   static Users user = Users();
   static String uid = "";
+
 }
