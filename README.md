@@ -1,4 +1,4 @@
-<b>FinalProject-MyAnimeListApp-ITD62-322
+<b>FinalProject-MyAnimeListApp-ITD62-322<b>
 <b>MyAnimeList: An Application for Entertainment Management using Flutter Framework<b>
 
 Created by: <br>
